@@ -73,7 +73,7 @@ class text_2_stata13Command(sublime_plugin.TextCommand):
 			DoCommandAsync "{1}" with addToReview
 		 end tell
 		 END""".format(settings.get('stata_name'), 
-		 	all_text.replace('\\', '\\\\\\').replace('"', '\\"').
+		 	all_text.replace('\\', '\\\\\\\\').replace('"', '\\"').
 		 	replace('`', '\\`').replace('$', "\\$").strip()) 
 		print(cmd)
 		os.system(cmd)
